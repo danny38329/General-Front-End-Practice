@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  <head>
+  <body>
+
+    <input type="text" id="myText" value="Mickey"><br>
+    <button onclick="myFunction()">Try it</button><br>
+
+  <textarea cols="50" rows="5" id="demo">
+    </textarea>
+
+   <script>
+    let newArray = [];
+function myFunction() {
+    
+  let x = document.getElementById("myText").value;
+  newArray.push(x);
+  document.getElementById("demo").innerHTML = newArray;
+}
+</script>
+
+ </body>
+
+
+<html>
