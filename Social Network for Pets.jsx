@@ -3,7 +3,7 @@ import { fetchUserData, cancelFetch } from './dataFetcher';
 import { Userlist } from './Userlist';
 
 export class Profile extends React.Component {
-  construcor(props) {
+  constructor(props) {
   super(props);
   this.state = { userData: null }
   }
@@ -16,10 +16,20 @@ export class Profile extends React.Component {
   componentDidMount() {
     this.loadUserData();
   }
-
+  componentWillUnmount() {
+    cancelFetch(this.fetchID)
+  }
+  componentDidUpdate(prevProps) {
+    if (this.props.username !== prevProps.username) {
+      cancelFetch(this.fetchID);
+      this.loadUserData();
+    }
+  }
   render() {
-    const isLoading = true;
-
+    const isLoading = this.state.userData === null ? true : false ;
+    let name = isLoading === true ? 'Loading...' : this.state.userData.name;
+    let bio = isLoading === true ? "An animal...." : this.state.userData.bio
+    let friends = isLoading === true ? [] : this.state.userData.friends
     let className = 'Profile';
     if (isLoading) {
       className += ' loading';
@@ -27,13 +37,17 @@ export class Profile extends React.Component {
 
     return (
       <div className={className}>
-        <div className="profile-picture"></div>
+        <div className="profile-picture">
+        {!isLoading && (
+          <img src={this.state.userData.profilePictureUrl} alt="" />
+        ) }
+        </div>
         <div className="profile-body">
-          <h2>Name goes here</h2>
+          <h2>{name}</h2>
           <h3>@{this.props.username}</h3>
-          <p>Bio goes here</p>
+          <p>{bio}</p>
           <h3>My friends</h3>
-          <Userlist usernames={[]} onChoose={this.props.onChoose} />
+          <Userlist usernames={friends} onChoose={this.props.onChoose} />
         </div>
       </div>
     );
