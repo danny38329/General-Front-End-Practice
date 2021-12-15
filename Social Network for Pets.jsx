@@ -3,6 +3,20 @@ import { fetchUserData, cancelFetch } from './dataFetcher';
 import { Userlist } from './Userlist';
 
 export class Profile extends React.Component {
+  construcor(props) {
+  super(props);
+  this.state = { userData: null }
+  }
+  loadUserData() {
+    this.setState({userData: null});
+    this.fetchID = fetchUserData(this.props.username, (userData) => {
+  this.setState({ userData });
+});
+  }
+  componentDidMount() {
+    this.loadUserData();
+  }
+
   render() {
     const isLoading = true;
 
