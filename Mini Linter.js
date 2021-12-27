@@ -36,8 +36,11 @@ betterWords.forEach(word => {
   }
 });
 
+/*
 console.log(`storywords: ${storyWords.length}`);
 console.log(`sentences: ${sentences.length}`);
 console.log(`really: ${reallyCount}`);
 console.log(`very: ${veryCount}`);
 console.log(`basically: ${basicallyCount}`);
+*/
+console.log(betterWords.join(' '));
