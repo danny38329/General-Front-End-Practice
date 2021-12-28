@@ -30,4 +30,6 @@ if (navigator.keyboard) {
     }
   }, true);
 
+  let passage1 = "teacher's professional duties may extend beyond formal teaching. Outside of the classroom teachers may accompany students on field trips, supervise study halls, help with the organization of school functions, and serve as supervisors for extracurricular activities. In some education systems, teachers may have responsibility for student discipline."
+
   

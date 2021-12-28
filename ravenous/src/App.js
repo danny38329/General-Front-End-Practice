@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+            Peanut Butter Jelly Time!
         </a>
       </header>
     </div>
