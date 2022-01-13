@@ -19,18 +19,7 @@ const App = () => {
     return digits;
   }
 
-  const handleClick = () => {
-    setCalcNum(prevCount => prevCount +1)
-    numArray.push(calcNum)
-  };
-  const handleClick2 = () => {
-    setCalcNum(prevCount => prevCount +2)
-    numArray.push(calcNum)
-  };
-  const handleClick3 = () => {
-    setCalcNum(prevCount => prevCount +3)
-    numArray.push(calcNum)
-  };
+  
   const handleClickClear = () => {
     setCalcNum(0)
   };
@@ -40,13 +29,18 @@ const App = () => {
 
   return (
     <div>
-      <button type="button" onClick={handleClick}>1</button>
-      <button type="button" onClick={handleClick2}>2</button>
-      <button type="button" onClick={handleClick3}>3</button>
+      <div className="elements">
+      <button>+</button>
+      <button>-</button>
+      <button>/</button>
+      <button>*</button>
       <button type="button" onClick={handleClickClear}>Clear</button>
-
+      </div>
 <br></br>
+      <div className="digits">
       {numButtons()}
+      </div>
+
       <h1>{calcNum}</h1>
       
     </div>
