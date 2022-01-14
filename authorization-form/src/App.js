@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 
 const App = () => {
   const [calcNum, setCalcNum] = useState(0);
+  const [result, setResult] = useState('');
 
   const numButtons = () => {
     let digits = [];
@@ -28,7 +29,7 @@ const App = () => {
 
 
   return (
-    <div>
+    <div className="calculator">
       <div className="elements">
       <button>+</button>
       <button>-</button>
@@ -39,6 +40,9 @@ const App = () => {
 <br></br>
       <div className="digits">
       {numButtons()}
+      
+      <button>.</button>
+      <button>=</button>
       </div>
 
       <h1>{calcNum}</h1>

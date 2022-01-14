@@ -1,8 +1,18 @@
 .App {
   text-align: center;
+
 }
 
 button:hover {
   color: red;
   background-color: darkgray;
+}
+
+button {
+
+  background-color: orange;
+}
+
+.calculator {
+  display: flex;
 }
