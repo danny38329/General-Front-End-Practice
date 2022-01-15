@@ -30,6 +30,9 @@ const App = () => {
 
   return (
     <div className="calculator">
+      <div className="display">
+      0
+      </div>
       <div className="elements">
       <button>+</button>
       <button>-</button>
@@ -45,7 +48,7 @@ const App = () => {
       <button>=</button>
       </div>
 
-      <h1>{calcNum}</h1>
+      <h1></h1>
       
     </div>
   )
