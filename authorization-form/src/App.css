@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+
 
 .App {
   text-align: center;
@@ -17,14 +15,10 @@ button:hover {
 }
 
 button {
-  width: 25%;
-  float: left;
+  grid-template-columns: 50px 50px 50px;
   background-color: orange;
 }
 
-.calculator {
-  display: flex;
-}
 
 h1 {
   width: 75%;
