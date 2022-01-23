@@ -11,7 +11,7 @@ const addElement = () => {
 
 
 
-    newItem.innerHTML = "<br> "+ x +" <button type='button' onclick=\"removeElement()\">Remove</button>";
+    newItem.innerHTML = "<br> "+ x +" <button type='button' onclick="addElement()">Remove</button>";
     document.getElementById("list").appendChild(newItem);
 
 
