@@ -5,6 +5,10 @@ keys.forEach(function(key){
   notes.push(document.getElementById(key));
 })
 
+
+notes.forEach(eventAssignment(note){
+  
+})
 // Write named functions that change the color of the keys below
 const keyPlay = (event) => {
   event.target.style.backgroundColor = 'red';
