@@ -1,19 +1,23 @@
-const removeElement = () => {
-    newItem.remove();
+
+
+const adjustTask = () => {
+    let item = document.createElement('p');
+    document.getElementById('list').appendChild(item);
+    let removeButton = document.createElement('button');
+    document.getElementById('list').appendChild(removeButton);
+
+    removeButton.innerHTML = 'remove';
+    removeButton.type = 'button';
+    removeButton.id = 'remove';
+
+    const removeElement = () => {
+        item.remove();
+        removeButton.remove();
+    }
+
+    removeButton.onclick = removeElement;
+
 }
 
-const addElement = () => {
-    let count = 0;
-    let x = document.getElementById("task").value;
 
-    let newItem = document.createElement('p');
-    
-
-
-
-    newItem.innerHTML = "<br> "+ x +" <button type='button' onclick='addElement()'>Remove</button>";
-    document.getElementById("list").appendChild(newItem);
-
-
-}
 
