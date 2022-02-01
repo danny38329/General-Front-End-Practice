@@ -1,8 +1,10 @@
 let firstNumber = "";
 let secondNumber = "";
+let mathOperator = "";
+let onSecondNumber = false;
 
 const buttonOne = () => {
-    if (firstNumber === "") {
+    if (onSecondNumber === false) {
     document.getElementById("demo").innerHTML = firstNumber += '1';
     } else {
         document.getElementById("demo").innerHTML = secondNumber += '1';
@@ -10,7 +12,7 @@ const buttonOne = () => {
 };
 
 const buttonTwo = () => {
-    if (firstNumber === "") {
+    if (onSecondNumber === false) {
         document.getElementById("demo").innerHTML = firstNumber += '2';
         } else {
             document.getElementById("demo").innerHTML = secondNumber += '2';
@@ -18,7 +20,7 @@ const buttonTwo = () => {
 };
 
 const buttonThree = () => {
-    if (firstNumber === "") {
+    if (onSecondNumber === false) {
         document.getElementById("demo").innerHTML = firstNumber += '3';
         } else {
             document.getElementById("demo").innerHTML = secondNumber += '3';
@@ -26,7 +28,7 @@ const buttonThree = () => {
 };
 
 const buttonFour = () => {
-    if (firstNumber === "") {
+    if (onSecondNumber === false) {
         document.getElementById("demo").innerHTML = firstNumber += '4';
         } else {
             document.getElementById("demo").innerHTML = secondNumber += '4';
@@ -34,7 +36,7 @@ const buttonFour = () => {
 };
 
 const buttonFive = () => {
-    if (firstNumber === "") {
+    if (onSecondNumber === false) {
         document.getElementById("demo").innerHTML = firstNumber += '5';
         } else {
             document.getElementById("demo").innerHTML = secondNumber += '5';
@@ -42,7 +44,7 @@ const buttonFive = () => {
 };
 
 const buttonSix = () => {
-    if (firstNumber === "") {
+    if (onSecondNumber === false) {
         document.getElementById("demo").innerHTML = firstNumber += '6';
         } else {
             document.getElementById("demo").innerHTML = secondNumber += '6';
@@ -50,7 +52,7 @@ const buttonSix = () => {
 };
 
 const buttonSeven = () => {
-    if (firstNumber === "") {
+    if (onSecondNumber === false) {
         document.getElementById("demo").innerHTML = firstNumber += '7';
         } else {
             document.getElementById("demo").innerHTML = secondNumber += '7';
@@ -58,7 +60,7 @@ const buttonSeven = () => {
 };
 
 const buttonEight = () => {
-    if (firstNumber === "") {
+    if (onSecondNumber === false) {
         document.getElementById("demo").innerHTML = firstNumber += '8';
         } else {
             document.getElementById("demo").innerHTML = secondNumber += '8';
@@ -66,9 +68,37 @@ const buttonEight = () => {
 };
 
 const buttonNine = () => {
-    if (firstNumber === "") {
+    if (onSecondNumber === false) {
         document.getElementById("demo").innerHTML = firstNumber += '9';
         } else {
             document.getElementById("demo").innerHTML = secondNumber += '9';
         }
 };
+
+const divideNumbers = () => {
+    mathOperator = "/";
+    document.getElementById("demo").innerHTML = mathOperator;
+    onSecondNumber = true;
+};
+
+const multiplyNumbers = () => {
+    mathOperator = "*";
+    document.getElementById("demo").innerHTML = mathOperator;
+    onSecondNumber = true;
+};
+
+const addNumbers = () => {
+    mathOperator = "+";
+    document.getElementById("demo").innerHTML = mathOperator;
+    onSecondNumber = true;
+};
+
+const subtractNumbers = () => {
+    mathOperator = "-";
+    document.getElementById("demo").innerHTML = mathOperator;
+    onSecondNumber = true;
+};
+
+const equalSign = () => {
+    
+}
