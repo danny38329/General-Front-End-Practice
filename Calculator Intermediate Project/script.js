@@ -100,5 +100,13 @@ const subtractNumbers = () => {
 };
 
 const equalSign = () => {
-    
+    if (mathOperator === "/") {
+        document.getElementById("demo").innerHTML = firstNumber / secondNumber;
+    } else if (mathOperator === "*") {
+        document.getElementById("demo").innerHTML = firstNumber * secondNumber;
+    } else if (mathOperator === "-") {
+        document.getElementById("demo").innerHTML = firstNumber - secondNumber;
+    } else if (mathOperator === "+") {
+        document.getElementById("demo").innerHTML = firstNumber + secondNumber;
+    }
 }
