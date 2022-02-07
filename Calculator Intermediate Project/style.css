@@ -1,3 +1,14 @@
+body {
+    background-image: url(https://www.wellesley.edu/sites/default/files/styles/news_refresh_hero/public/assets/dailyshot/ds_461390782.jpg?itok=jr0Buv1t);
+}
+
+header {
+    text-align: center;
+    color: white;
+    background-color: red;
+    align-items: center;
+}
+
 #calculator {
     display: flex;
     align-items: center;
@@ -5,7 +16,9 @@
     background-color: gray;
     border-radius: 12px;
     width: 400px;
+    margin: auto
 }
+
 
 #numbers {
     display: grid;
@@ -13,7 +26,11 @@
     grid-template-rows: 75px 75px 75px; 
     column-gap: 10px;
     row-gap: 10px;
-       
+    
+}
+
+button {
+    border-radius: 12px;
 }
 
 button:hover {
