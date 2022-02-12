@@ -7,3 +7,4 @@ let prevBox;
 let currentBox;
 
 currentBox.style.backgroundColor = "blue";
+
