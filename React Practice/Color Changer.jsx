@@ -5,3 +5,7 @@ function blueColor() {
 function redColor() {
     return "red";
 }
+
+function greenColor() {
+    return "green";
+}
