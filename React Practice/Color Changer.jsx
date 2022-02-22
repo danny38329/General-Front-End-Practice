@@ -9,3 +9,7 @@ function redColor() {
 function greenColor() {
     return "green";
 }
+
+function yellowColor() {
+    return "yellow";
+}
