@@ -13,3 +13,7 @@ function greenColor() {
 function yellowColor() {
     return "yellow";
 }
+
+function purpleColor() {
+    return "purple";
+}
