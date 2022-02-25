@@ -14,6 +14,8 @@ function yellowColor() {
     return "yellow";
 }
 
-function purpleColor() {
-    return "purple";
+function orangeColor() {
+    return "orange";
+
+
 }
