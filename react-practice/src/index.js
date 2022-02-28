@@ -4,9 +4,33 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function AddDigitalClock() {
+  var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+return <p>{time}</p>
+
+}
+
 function ChangeColor() {
   const [color, setColor] = useState("white");
-  setColor("red")
+  const changeRed = () => {
+
+    setColor("red")
+  }
+
+  const changeBlue = () => {
+
+    setColor("blue")
+  }
+
+  document.body.style.background = color;
+
+  return (
+  <div>
+  <button onClick={changeRed}>Change to Red</button>
+  <button onClick={changeBlue}>Change to Blue</button>
+  </div>
+  )
 }
 
 function Counter() {
@@ -19,6 +43,8 @@ return (
   <div>
     <h1>The count is {count}</h1>
     <button onClick={increment}>Add</button>
+    <ChangeColor />
+    <AddDigitalClock />
 
   </div>
 )
