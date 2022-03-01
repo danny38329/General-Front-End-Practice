@@ -5,11 +5,21 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 function AddDigitalClock() {
+ 
   var today = new Date();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  
 return <p>{time}</p>
 
 }
+
+function MakeContinuous() {
+  setInterval(AddDigitalClock, 1000);
+  return <AddDigitalClock />;
+}
+
+
+
 
 function ChangeColor() {
   const [color, setColor] = useState("white");
@@ -44,7 +54,7 @@ return (
     <h1>The count is {count}</h1>
     <button onClick={increment}>Add</button>
     <ChangeColor />
-    <AddDigitalClock />
+    <MakeContinuous />
 
   </div>
 )
