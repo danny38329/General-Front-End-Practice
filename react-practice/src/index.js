@@ -4,19 +4,40 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+
+function CoinToss() {
+
+  const heads = 'heads';
+  const tails = 'tails';
+
+  if (Math.floor(Math.random() * 3) === 1) {
+    return heads;
+  } else {
+    return tails;
+  }
+
+  return (<div>
+
+
+  </div>)
+
+}
+
 function AddDigitalClock() {
  
+  const [ticker, setTicker] = useState(time);
   var today = new Date();
   let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+  const refreshClock = () => {
+    setTicker(time);
+  }
   
-return <p>{time}</p>
+return <p></p>
 
 }
 
-function MakeContinuous() {
-  setInterval(AddDigitalClock, 1000);
-  return <AddDigitalClock />;
-}
 
 
 
@@ -54,7 +75,7 @@ return (
     <h1>The count is {count}</h1>
     <button onClick={increment}>Add</button>
     <ChangeColor />
-    <MakeContinuous />
+    <AddDigitalClock />
 
   </div>
 )
