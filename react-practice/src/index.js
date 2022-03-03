@@ -7,27 +7,29 @@ import reportWebVitals from './reportWebVitals';
 
 
 function CoinToss() {
-
+  const [face, setFace] = useState('none');
   const heads = 'heads';
   const tails = 'tails';
-  let coinFlip;
+  
   
   const genCoin = () => {
 
   let randomNum = Math.floor(Math.random() * 2);
 
   if (randomNum === 0) {
-    coinFlip = heads;
+    setFace('heads');
   } else {
-    coinFlip = tails;
+    setFace('tails');
   }
-  return randomNum;
+  return face;
   };
 
 
   return (<div>
-      <h1>{genCoin}</h1>
-
+    <p>
+      <h1>the coin flip is: {face}</h1>
+    </p>
+      <button onClick={genCoin}>coin</button>
   </div>)
 
 }
@@ -83,7 +85,7 @@ return (
     <h1>The count is {count}</h1>
     <button onClick={increment}>Add</button>
     <ChangeColor />
-    <AddDigitalClock />
+    
 
   </div>
 )
