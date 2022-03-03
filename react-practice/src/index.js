@@ -10,15 +10,23 @@ function CoinToss() {
 
   const heads = 'heads';
   const tails = 'tails';
+  let coinFlip;
+  
+  const genCoin = () => {
 
-  if (Math.floor(Math.random() * 3) === 1) {
-    return heads;
+  let randomNum = Math.floor(Math.random() * 2);
+
+  if (randomNum === 0) {
+    coinFlip = heads;
   } else {
-    return tails;
+    coinFlip = tails;
   }
+  return randomNum;
+  };
+
 
   return (<div>
-
+      <h1>{genCoin}</h1>
 
   </div>)
 
@@ -85,6 +93,7 @@ return (
 ReactDOM.render(
   <React.StrictMode>
     <Counter />
+    <CoinToss />
   </React.StrictMode>,
   document.getElementById('root')
 );
