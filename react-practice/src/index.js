@@ -4,16 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-function RomanNumeral() {
-  let exR = "X";
-  let fiveF = "V";
-  return (<div>
+ function RandomQuote() {
+  const [quote, setQuote] = useState('');
+  let quoteOne = "yes";
+  let quoteTwo = "no";
+  let quoteThree = "maybe";
+  
 
 
-  </div>
-  )
-
-}
+ }
 
 
 function CoinToss() {
@@ -95,7 +94,7 @@ return (
     <h1>The count is {count}</h1>
     <button onClick={increment}>Add</button>
     <ChangeColor />
-    
+  
 
   </div>
 )
@@ -105,7 +104,6 @@ return (
 ReactDOM.render(
   <React.StrictMode>
     <Counter />
-    <CoinToss />
   </React.StrictMode>,
   document.getElementById('root')
 );
