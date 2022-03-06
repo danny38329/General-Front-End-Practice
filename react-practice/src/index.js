@@ -4,12 +4,41 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function CalculatorButtons() {
+  let buttonArray = [];
+
+  for (let i = 0; i < 10; i++) {
+    buttonArray.push(
+      <button>{i}</button>
+    )
+  }
+  return buttonArray;
+}
+
+
+
  function RandomQuote() {
   const [quote, setQuote] = useState('');
   let quoteOne = "yes";
   let quoteTwo = "no";
   let quoteThree = "maybe";
-  
+
+  const createRandom = () => {
+  let randomNumber = Math.floor(Math.random() * 3);
+  if (randomNumber === 0) {
+    setQuote(quoteOne);
+  } else if (randomNumber === 1) {
+    setQuote(quoteTwo);
+  } else {
+    setQuote(quoteThree);
+  }};
+
+  return (
+    <div>
+      <button onClick={createRandom}>Generate</button>
+      <h1>{quote}</h1>
+    </div>
+  )
 
 
  }
@@ -103,7 +132,7 @@ return (
 
 ReactDOM.render(
   <React.StrictMode>
-    <Counter />
+    <CalculatorButtons />
   </React.StrictMode>,
   document.getElementById('root')
 );
