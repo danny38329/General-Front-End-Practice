@@ -4,70 +4,47 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function ToDoList() {
+  const [note, setNote] = useState("");
+
+  const addNote = () => {
+
+  }
+
+  return(
+    <div>
+      <input type="text" />
+      <button type="button">Add</button>
+    </div>
+  )
+}
+
 
 
 function StopWatch() {
   const [timer, setTimer] = useState(0);
+  const [isActive, setIsActive] = useState(true);
 
-  useEffect(() => {
-    let intervalOne = setInterval(setTimer(timer + 1), 1000);
-    return clearInterval(intervalOne);
+    useEffect(() => {
+    let interval = setInterval(()=> {
+      setTimer(timer => timer + 1);
+    }, 1000);
+    return () => clearInterval(interval);
   }, []);
-
+  
   return (
     <div>
       <h1>{timer}</h1>
     </div>
-  )
-
-}
-
-function AddCart() {
-  const [cart, setCart] = useState("");
-  let emptyArray = [];
-  let count = 0;
-
-  const addButton = () => {
-    count += 1;
-    emptyArray.push(<h1>Item: {count}</h1>)
-
-  }
-  return (
-    <div>
-      <h1>AddCart Test</h1>
-      <button onClick={addButton}>Add</button>
-      <p>{emptyArray}</p>
-    </div>
-  )
+  )};
 
 
-}
 
-function ExtrovertOrIntrovert() {
-  const [personality, setPersonality] = useState("");
-
-  const extrovert = () => {
-    setPersonality("extrovert");
-  }
-
-  const introvert = () => {
-    setPersonality("introvert");
-  }
-
-  return (
-    <div>
-      <h1>What is your personality?</h1>
-      <button onClick={extrovert}>Extrovert</button>
-      <button onClick={introvert}>Introvert</button>
-      <h1>{personality}</h1>
-    </div>
-  )
-}
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <StopWatch />
+    <ToDoList />
   </React.StrictMode>,
   document.getElementById('root')
 );
