@@ -5,7 +5,29 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 function RandomQuotes() {
+  const [quote, setQuote] = useState("");
   
+  const generateQuote = () => {
+    let randomNumber = Math.floor(Math.random() * 4);
+    if (randomNumber === 0) {
+      setQuote("And as you gaze into the abyss, the abyss gazes into you...");
+    } else if (randomNumber === 1) {
+      setQuote("I think, therefore I am...");
+    } else if (randomNumber === 2) {
+      setQuote("The only thing to fear is fear itself...");
+    } else {
+      setQuote("Not a step back...");
+    }
+
+    return quote;
+  }
+  return(
+    <div>
+      <button onClick={generateQuote}>Generate</button>
+      <h1>{quote}</h1>
+    </div>
+  )
+
 }
 
 function Counter() {
@@ -63,7 +85,7 @@ function StopWatch() {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Counter />
+    <RandomQuotes />
   </React.StrictMode>,
   document.getElementById('root')
 );
