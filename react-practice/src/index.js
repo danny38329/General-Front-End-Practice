@@ -4,6 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function RandomQuotes() {
+  
+}
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  const addNumber = () => {
+    setCount((prevCount) => prevCount + 1);
+  }
+  return(
+    <div>
+      <button onClick={addNumber}>CounterADD</button>
+      <h1>{count}</h1>
+    </div>
+  )
+}
+
+
 function ToDoList() {
   const [note, setNote] = useState("");
 
@@ -11,7 +30,7 @@ function ToDoList() {
 
   }
 
-  return(
+  return( 
     <div>
       <input type="text" />
       <button type="button">Add</button>
@@ -44,7 +63,7 @@ function StopWatch() {
 
 ReactDOM.render(
   <React.StrictMode>
-    <ToDoList />
+    <Counter />
   </React.StrictMode>,
   document.getElementById('root')
 );
