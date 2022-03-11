@@ -4,6 +4,37 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function BoxingFighter() {
+  const [punch, setPunch] = useState("");
+  let fighterOne = "";
+  let fighterTwo = "";
+
+  const fightNight = () => {
+    let redPunch = "";
+    let bluePunch = "";
+    let redCorner = Math.floor(Math.random() *2);
+    let blueCorner = Math.floor(Math.random() *2);
+    if (redCorner === 0) {
+      redPunch = "straight";
+    } else {
+      redPunch = "hook"
+    };
+    if (blueCorner === 0) {
+      bluePunch = "straight";
+    } else {
+      bluePunch = "hook"
+    };
+
+    if (bluePunch === redPunch) {
+      
+    }
+
+    }
+
+  }
+
+}
+
 function RandomQuotes() {
   const [quote, setQuote] = useState("");
   
