@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function MiniAddition() {
+  
+}
+
 function BoxingFighter() {
   const [punch, setPunch] = useState("");
   let fighterOne = "";
@@ -26,7 +30,7 @@ function BoxingFighter() {
     };
 
     if (bluePunch === redPunch) {
-      
+
     }
 
     }
