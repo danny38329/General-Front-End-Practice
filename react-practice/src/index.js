@@ -4,8 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-function MiniAddition() {
+const MiniAddition = (x, numOne, numTwo) => {
+  const [numAdd, setNumAdd] = useState(0);
   
+
+  return(
+    <div>
+      <input type="text"
+      onChange = { (event) => setNumAdd(event.target.value) } />
+    </div>
+  )
 }
 
 function BoxingFighter() {
