@@ -6,46 +6,19 @@ import reportWebVitals from './reportWebVitals';
 
 const MiniAddition = (x, numOne, numTwo) => {
   const [numAdd, setNumAdd] = useState(0);
-  
+
 
   return(
     <div>
       <input type="text"
-      onChange = { (event) => setNumAdd(event.target.value) } />
+      onChange = { (event) => setNumAdd(event.target.value) } /> 
+      <h1>{numAdd}</h1>
     </div>
   )
 }
 
-function BoxingFighter() {
-  const [punch, setPunch] = useState("");
-  let fighterOne = "";
-  let fighterTwo = "";
 
-  const fightNight = () => {
-    let redPunch = "";
-    let bluePunch = "";
-    let redCorner = Math.floor(Math.random() *2);
-    let blueCorner = Math.floor(Math.random() *2);
-    if (redCorner === 0) {
-      redPunch = "straight";
-    } else {
-      redPunch = "hook"
-    };
-    if (blueCorner === 0) {
-      bluePunch = "straight";
-    } else {
-      bluePunch = "hook"
-    };
-
-    if (bluePunch === redPunch) {
-
-    }
-
-    }
-
-  }
-
-}
+ 
 
 function RandomQuotes() {
   const [quote, setQuote] = useState("");
@@ -128,7 +101,7 @@ function StopWatch() {
 
 ReactDOM.render(
   <React.StrictMode>
-    <RandomQuotes />
+    <MiniAddition />
   </React.StrictMode>,
   document.getElementById('root')
 );
