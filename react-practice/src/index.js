@@ -4,17 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const MiniAddition = (x, numOne, numTwo) => {
-  const [numAdd, setNumAdd] = useState(0);
+function HandleInput() {
+  const [name, setName] = useState([]);
 
+  const inputEnter = () => {
+    let count = 0;
+    count ++;
+    name.push([count])
+  }
 
-  return(
-    <div>
-      <input type="text"
-      onChange = { (event) => setNumAdd(event.target.value) } /> 
-      <h1>{numAdd}</h1>
-    </div>
-  )
 }
 
 
