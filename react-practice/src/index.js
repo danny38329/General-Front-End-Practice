@@ -4,14 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function BudgetCalculator() {
+  
+}
+
 function HandleInput() {
   const [name, setName] = useState([]);
 
   const inputEnter = () => {
     let count = 0;
     count ++;
-    name.push([count])
+    name.push([count, name])
   }
+
+  return(
+    <div>
+      <input type="text" onChange={e => {setName(prevCount => prevCount + "xxx" + e.target.value)}} />
+      <button type="button" onClick={inputEnter}>Add</button>
+      <h1>{name}</h1>
+    </div>
+  )
 
 }
 
@@ -99,7 +111,7 @@ function StopWatch() {
 
 ReactDOM.render(
   <React.StrictMode>
-    <MiniAddition />
+    <HandleInput />
   </React.StrictMode>,
   document.getElementById('root')
 );
