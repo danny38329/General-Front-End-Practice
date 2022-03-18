@@ -4,6 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function ChangeColor() {
+  const [color, setColor] = useState("");
+
+  const changeRed = () => {
+    setColor("red");
+  }
+
+  const changeBlue = () => {
+    setColor("blue");
+  }
+
+  document.body.style.backgroundColor = color;
+  return(<div>
+    <button type="button" onClick={changeRed}>Red</button>
+    <button type="button" onClick={changeBlue}>Blue</button>
+  </div>)
+}
+
 function Counter() {
   const [count, setCount] = useState(0);
 
@@ -24,7 +42,7 @@ function Counter() {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Counter />
+    <ChangeColor />
   </React.StrictMode>,
   document.getElementById('root')
 );
