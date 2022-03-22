@@ -4,52 +4,43 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-function RomanNumeral() {
-  const [roman, setRoman] = useState("");
-  return(<div>
-    
-  </div>)
+
+function GetInfo() {
+  
+
+    useEffect(() => {
+      const [status, setStatus] = useState('idle');
+      const [query, setQuery] = useState('');
+      const [data, setData] = useState([]);
+      
+      useEffect(() => {
+          if (!query) return;
+      
+          const fetchData = async () => {
+              setStatus('fetching');
+              const response = await fetch(
+                'https://api.hatchways.io/assessment/students'
+              );
+              const data = await response.json();
+              setData(data.hits);
+              setStatus('fetched');
+          };
+      
+          fetchData();
+      }, [query]);
+  
+
+    return(
+        <div>
+            <h1>{data}</h1>   
+        </div>
+    );
 }
-
-function ChangeColor() {
-  const [color, setColor] = useState("");
-
-  const changeRed = () => {
-    setColor("red");
-  }
-
-  const changeBlue = () => {
-    setColor("blue");
-  }
-
-  document.body.style.backgroundColor = color;
-  return(<div>
-    <button type="button" onClick={changeRed}>Red</button>
-    <button type="button" onClick={changeBlue}>Blue</button>
-  </div>)
-}
-
-function Counter() {
-  const [count, setCount] = useState(0);
-
-  const addCount = () => {
-    setCount(count + 1);
-  }
-
-  return(
-    <div>
-      <button type='button' onClick={addCount}>Count ADD</button>
-      <h1>{count}</h1>
-    </div>
-  )
-
-}
-
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChangeColor />
+  <GetInfo />
   </React.StrictMode>,
   document.getElementById('root')
 );
