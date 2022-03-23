@@ -6,36 +6,24 @@ import reportWebVitals from './reportWebVitals';
 
 
 function GetInfo() {
-  
+  const [data, setData] = useState([]);
 
-    useEffect(() => {
-      const [status, setStatus] = useState('idle');
-      const [query, setQuery] = useState('');
-      const [data, setData] = useState([]);
-      
-      useEffect(() => {
-          if (!query) return;
-      
-          const fetchData = async () => {
-              setStatus('fetching');
-              const response = await fetch(
-                'https://api.hatchways.io/assessment/students'
-              );
-              const data = await response.json();
-              setData(data.hits);
-              setStatus('fetched');
-          };
-      
-          fetchData();
-      }, [query]);
-  
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(
+        'https://api.hatchways.io/assessment/students',
+      );
+      const json = await res.json();
+      setData(json.hits);
+    };
+    fetchData();
+  }, [setData]);
 
-    return(
-        <div>
-            <h1>{data}</h1>   
-        </div>
-    );
-}
+  return(<div>
+    <ul>{data}</ul>
+    </div>
+  );
+};
 
 
 ReactDOM.render(
