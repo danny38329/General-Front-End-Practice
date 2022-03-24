@@ -6,25 +6,47 @@ import reportWebVitals from './reportWebVitals';
 
 
 function GetInfo() {
-  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [items, setItems] = useState([]);
 
+  // Note: the empty deps array [] means
+  // this useEffect will run once
+  // similar to componentDidMount()
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch(
-        'https://api.hatchways.io/assessment/students',
-      );
-      const json = await res.json();
-      setData(json.hits);
-    };
-    fetchData();
-  }, [setData]);
+    fetch("https://api.hatchways.io/assessment/students")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setItems(result);
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      )
+  }, [])
 
-  return(<div>
-    <ul>{data}</ul>
-    </div>
-  );
-};
-
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  } else if (!isLoaded) {
+    return <div>Loading...</div>;
+  } else {
+    return (
+      <ul>
+        {items.map(item => (
+          <li key={item.id}>
+            {item.name} {item.price}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+}
 
 ReactDOM.render(
   <React.StrictMode>
