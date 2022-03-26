@@ -2,7 +2,12 @@ import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals'; 
+
+function DogBreed() {
+  const [dog, setDog] = useState('');
+
+}
 
 function DigitalClock() {
   const [time, setTime] = useState(0);
