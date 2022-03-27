@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 
 function DogBreed() {
   const [dog, setDog] = useState('');
+  let breed = '';
+  let questionOne = "Do you want a large or small dog?";
+  let questionTwo = ""
 
 }
 
