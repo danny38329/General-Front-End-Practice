@@ -8,8 +8,13 @@ function DogBreed() {
   const [dog, setDog] = useState('');
   let breed = '';
   let questionOne = "Do you want a large or small dog?";
-  let questionTwo = ""
+  let questionTwo = "Do you want a protective dog or companion dog?";
+  let questionThree = "Do you want a active dog or inactive dog?";
 
+  let domBreed = 'Kangal';
+  let subBreed = 'Chihuahua';
+
+  
 }
 
 function DigitalClock() {
