@@ -13,8 +13,14 @@ function DogBreed() {
 
   let domBreed = 'Kangal';
   let subBreed = 'Chihuahua';
+  return(
+    <div>
+      <input type = "text"></input>
+      <button type="button">Yes</button>
+    </div>
+  )
 
-  
+
 }
 
 function DigitalClock() {
