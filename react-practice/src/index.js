@@ -17,6 +17,10 @@ function DogBreed() {
     <div>
       <input type = "text"></input>
       <button type="button">Yes</button>
+      <input type = "text"></input>
+      <button type="button">Yes</button>
+      <input type = "text"></input>
+      <button type="button">Yes</button>
     </div>
   )
 
