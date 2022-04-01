@@ -5,22 +5,38 @@ import App from './App';
 import reportWebVitals from './reportWebVitals'; 
 
 function DogBreed() {
-  const [dog, setDog] = useState('');
+  const [dog, setDog] = useState(0);
   let breed = '';
   let questionOne = "Do you want a large or small dog?";
   let questionTwo = "Do you want a protective dog or companion dog?";
   let questionThree = "Do you want a active dog or inactive dog?";
 
+  const addToBreed = () => {
+    setDog(dog + 1);
+  }
+
   let domBreed = 'Kangal';
   let subBreed = 'Chihuahua';
   return(
     <div>
-      <input type = "text"></input>
-      <button type="button">Yes</button>
-      <input type = "text"></input>
-      <button type="button">Yes</button>
-      <input type = "text"></input>
-      <button type="button">Yes</button>
+      <h3>Do you want a large dog?</h3>
+
+      <button type="button" onClick={addToBreed}>Yes</button>
+      
+      <button type="button" >No</button>
+      <br></br>
+      <h3>Do want a friendly dog?</h3>
+      <button type="button" onClick={addToBreed}>Yes</button>
+
+      <button type="button">No</button>
+      <br></br>
+      <h3>Do you want an active dog?</h3>
+      <button type="button" onClick={addToBreed}>Yes</button>
+   
+      <button type="button">No</button>
+      <br></br>
+
+      <h1>{dog > 0 ? domBreed: subBreed}</h1>
     </div>
   )
 
@@ -42,7 +58,7 @@ function DigitalClock() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <DigitalClock />
+  <DogBreed />
   </React.StrictMode>,
   document.getElementById('root')
 );
