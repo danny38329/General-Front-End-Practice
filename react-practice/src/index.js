@@ -4,61 +4,87 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals'; 
 
-function DogBreed() {
-  const [dog, setDog] = useState(0);
-  let breed = '';
-  let questionOne = "Do you want a large or small dog?";
-  let questionTwo = "Do you want a protective dog or companion dog?";
-  let questionThree = "Do you want a active dog or inactive dog?";
+function PersonalityTest() {
+  const [personality, setPersonality] = useState('');
+  const [extrovert, setExtrovert] = useState(0);
+  const [sensing, setSensing] = useState(0);
+  const [thinking, setThinking] = useState(0);
+  const [perceiving, setPerceiving] = useState(0);
 
-  const addToBreed = () => {
-    setDog(dog + 1);
+  return(<div>
+
+    <h3>Do you get energized by social events or would you prefer to be alone?</h3>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+
+    <h3>Are you more of a talker than a listener?</h3>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+
+    <h3>Do you love attention?</h3>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+
+    <h3>Do you live more for the moment or focus on the future?</h3>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+
+    <h3>Do you prefer to play now and work later?</h3>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+
+    <h3>Do you like be spontaneous rather than have a planned schedule?</h3>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+
+    <h3>Do you lack empathy?</h3>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+
+    <h3>Do you follow your head more than your heart?</h3>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+
+    <h3>Do you prefer your kids to be smart than kind ?</h3>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+
+    <h3>Do you like having a set daily routine?</h3>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+
+    <h3>Are you able to focus on tasks for long periods of time?</h3>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+
+    <h3>Do you resist temptation easily?</h3>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+
+  </div>)
+};
+
+function InputPractice() {
+  const [answer, setAnswer] = useState('');
+  const [practice, setPractice] = useState([]);
+  
+
+
+  const addInputs = () => {
+    setPractice(practices => [...practices, answer +  ", "]);
   }
-
-  let domBreed = 'Kangal';
-  let subBreed = 'Chihuahua';
   return(
     <div>
-      <h3>Do you want a large dog?</h3>
-
-      <button type="button" onClick={addToBreed}>Yes</button>
-      
-      <button type="button" >No</button>
-      <br></br>
-      <h3>Do want a friendly dog?</h3>
-      <button type="button" onClick={addToBreed}>Yes</button>
-
-      <button type="button">No</button>
-      <br></br>
-      <h3>Do you want an active dog?</h3>
-      <button type="button" onClick={addToBreed}>Yes</button>
-   
-      <button type="button">No</button>
-      <br></br>
-
-      <h1>{dog > 0 ? domBreed: subBreed}</h1>
+       <input type="text" onChange={e => setAnswer(e.target.value)} />
+       <button type="button" onClick={addInputs}>Click Me</button>
+       <h1>{practice}</h1>
     </div>
   )
-
-
 }
-
-function DigitalClock() {
-  const [time, setTime] = useState(0);
-
-
-  useEffect(()=> {
-    let intervalId = setInterval(setTime(time + 1), 10);
-    
-  }, []);
-
-  return(
-    <div><h1>{time}</h1></div>
-  )};
 
 ReactDOM.render(
   <React.StrictMode>
-  <DogBreed />
+  <PersonalityTest />
   </React.StrictMode>,
   document.getElementById('root')
 );
