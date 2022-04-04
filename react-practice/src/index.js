@@ -4,6 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals'; 
 
+function BasketballStats() {
+  const [player, setPlayer] = useState('');
+  const [points, setPoints] = useState(0);
+  const [rebounds, setRebounds] = useState(0);
+  const [assists, setAssists] = useState(0);
+
+  return(<div>
+    <h1></h1>
+  </div>)
+};
+
 function PersonalityTest() {
   const [personality, setPersonality] = useState('');
   const [extrovert, setExtrovert] = useState(0);
