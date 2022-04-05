@@ -10,7 +10,29 @@ function BasketballStats() {
   const [rebounds, setRebounds] = useState(0);
   const [assists, setAssists] = useState(0);
 
+  const bulls = {
+    player: "Michael Jordan", 
+    points: 35,
+    rebounds : 6,
+    assists: 6
+  };
+
+  const cavs = {
+    player: "LeBron James", 
+    points: 30,
+    rebounds : 8,
+    assists: 8
+  };
+
+  const lakers = {
+    player: "Kareem Abdul Jabbar", 
+    points: 30,
+    rebounds : 4,
+    assists: 12
+  };
+
   return(<div>
+    <input type="text" onChange={e => setPlayer(e.target.value)} />
     <h1></h1>
   </div>)
 };
@@ -134,7 +156,7 @@ function InputPractice() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <PersonalityTest />
+  <BasketballStats />
   </React.StrictMode>,
   document.getElementById('root')
 );
