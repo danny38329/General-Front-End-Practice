@@ -4,31 +4,38 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals'; 
 
-const MusicPlaylist() {
 
-  const [song, setSong] = ("");
+function MusicPlaylist() {
+  const [songAddition, setSongAddition] = useState('');
+  const [song, setSong] = useState('test');
 
   const songList = {
-   songOne : "L'Amour Toujours",
-   songTwo : "Summer",
-   songThree : "Daddy DJ",
-   songFour : "Sea"
+   "1" : "L'Amour Toujours",
+   "2" : "Summer",
+   "3" : "Daddy DJ",
+   "4" : "Sea"
   };
+
+  const inputSong = () => {
+    
+  }
+ 
+  const randomNumber = () => {
+    let chosenNumber = Math.floor(Math.random() * 5);
+    setSong(songList[chosenNumber]);
+  }
 
 
 
   return(<div>
 
-    <input type="text" onChange={e => setSong(e.target.value)} />
+    <input type='text' onChange={e => setSongAddition(e.target.value)} />
 
-    <button type="button">Add Song</button>
+    <button type="button">Add</button>
 
-    <button type="button">Shuffle</button>
+    <button type="button" onClick={randomNumber}>Shuffle</button>
 
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
+    <h1>{song}</h1>
 
 
   </div>)
@@ -194,7 +201,7 @@ function InputPractice() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <BasketballStats />
+  <MusicPlaylist />
   </React.StrictMode>,
   document.getElementById('root')
 );
