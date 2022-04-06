@@ -4,7 +4,40 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals'; 
 
+const MusicPlaylist() {
+
+  const [song, setSong] = ("");
+
+  const songList = {
+   songOne : "L'Amour Toujours",
+   songTwo : "Summer",
+   songThree : "Daddy DJ",
+   songFour : "Sea"
+  };
+
+
+
+  return(<div>
+
+    <input type="text" onChange={e => setSong(e.target.value)} />
+
+    <button type="button">Add Song</button>
+
+    <button type="button">Shuffle</button>
+
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+
+  </div>)
+};
+
+
+
 function BasketballStats() {
+
   const [player, setPlayer] = useState('');
   const [points, setPoints] = useState(0);
   const [rebounds, setRebounds] = useState(0);
@@ -32,8 +65,13 @@ function BasketballStats() {
   };
 
   return(<div>
+
     <input type="text" onChange={e => setPlayer(e.target.value)} />
-    <h1></h1>
+    <button type="button">Player</button>
+
+    <h1>{player === "Michael Jordan" ? <div> <h1>{bulls.player}</h1><h1>{bulls.points} </h1> </div>: ""}</h1>
+  
+
   </div>)
 };
 
