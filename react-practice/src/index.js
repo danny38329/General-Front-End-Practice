@@ -4,6 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals'; 
 
+function ToDoList() {
+
+  const [note, setNote] = useState('');
+  const [addInput, setAddInput] = useState([]);
+  
+  const addNote = () => {
+    setAddInput(addInputs => [...addInputs, <div><br /><button type="button">Test</button></div>])
+  }
+
+  return(<div>
+    <input type="text" onChange={e => setNote(e.target.value)}/>
+    <button type="button" onClick={addNote}>Add Note</button>
+    <h1>{addInput}</h1>
+  </div>)
+};
+
 
 function MusicPlaylist() {
   const [songAddition, setSongAddition] = useState('');
@@ -201,7 +217,7 @@ function InputPractice() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <MusicPlaylist />
+  <ToDoList />
   </React.StrictMode>,
   document.getElementById('root')
 );
