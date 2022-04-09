@@ -6,17 +6,20 @@ import reportWebVitals from './reportWebVitals';
 
 function ToDoList() {
 
+  
   const [note, setNote] = useState('');
   const [addInput, setAddInput] = useState([]);
+
   
   const addNote = () => {
-    setAddInput(addInputs => [...addInputs, <div><br /><button type="button">Test</button></div>])
+    setAddInput(addInputs => [...addInputs, <div>{note}</div>])
   }
 
   return(<div>
     <input type="text" onChange={e => setNote(e.target.value)}/>
     <button type="button" onClick={addNote}>Add Note</button>
     <h1>{addInput}</h1>
+    
   </div>)
 };
 
