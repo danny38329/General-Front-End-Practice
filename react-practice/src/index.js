@@ -10,6 +10,9 @@ function ToDoList() {
   const [note, setNote] = useState('');
   const [addInput, setAddInput] = useState([]);
 
+  const removalButton = () => {
+    
+  }
   
   const addNote = () => {
     setAddInput(addInputs => [...addInputs, <div>{note}</div>])
