@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals'; 
 
+function Calculator() {
+  
+}
+
 function ToDoList() {
 
   
@@ -12,7 +16,9 @@ function ToDoList() {
   const [count, setCount] = useState(-1);
 
   const removalButton = () => {
-    setAddInput(addInput.splice(count,1));
+    const extraInput = [...addInput]; 
+
+    setAddInput(extraInput.splice(count,1));
     setCount(count -1); 
   };
   
