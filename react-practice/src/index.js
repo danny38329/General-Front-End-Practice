@@ -4,8 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals'; 
 
-function Calculator() {
+function colorChanger() {
   
+}
+
+function Calculator() {
+  return(<div>
+
+  </div>)
 }
 
 function ToDoList() {
