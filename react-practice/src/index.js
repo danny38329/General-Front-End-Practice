@@ -5,7 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals'; 
 
 function colorChanger() {
+  const[color, setColor] = useState('');
   
+  return(<div>
+
+  </div>)
 }
 
 function Calculator() {
