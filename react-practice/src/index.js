@@ -7,9 +7,13 @@ import reportWebVitals from './reportWebVitals';
 function ToDoListRemoval() {
   const [count, setCount] = useState(0);
   const [note, setNote] = useState();
+
+
+
   return(
     <div>
-      
+      <input type="text" onChange={e => setNote(e.target.value)}/>
+
     </div>
   )
 }
