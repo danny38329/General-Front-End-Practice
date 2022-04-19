@@ -7,25 +7,22 @@ import reportWebVitals from './reportWebVitals';
 function ToDoListRemoval() {
   const [count, setCount] = useState(0);
   const [note, setNote] = useState();
+  const [task, setTask] = useState([]);
 
-
+  const addInput = () => {
+    setTask(tasks => [...tasks, <div>{note}<button type="button">Remove</button></div>]);
+  }
 
   return(
     <div>
       <input type="text" onChange={e => setNote(e.target.value)}/>
-
-    </div>
+      <button type="button" onClick={addInput}>Add Note</button> 
+      <h1>{task}</h1>   
+      </div>
   )
-}
+};
 
 
-function colorChanger() {
-  const[color, setColor] = useState('');
-
-  return(<div>
-
-  </div>)
-}
 
 function Calculator() {
   return(<div>
@@ -256,7 +253,7 @@ function InputPractice() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <ToDoList />
+  <ToDoListRemoval />
   </React.StrictMode>,
   document.getElementById('root')
 );
