@@ -9,6 +9,10 @@ function ToDoListRemoval() {
   const [note, setNote] = useState();
   const [task, setTask] = useState([]);
 
+  const removal = () => {
+    
+  }
+
   const addInput = () => {
     setTask(tasks => [...tasks, <div>{note}<button type="button">Remove</button></div>]);
   }
