@@ -10,7 +10,7 @@ function ToDoListRemoval() {
   const [task, setTask] = useState([]);
 
   const removal = () => {
-    
+    setTask(task.filter(item => ))
   }
 
   const addInput = () => {
