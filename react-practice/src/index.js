@@ -1,38 +1,43 @@
 import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals'; 
 
-function ToDoListRemoval() {
-  const [count, setCount] = useState(0);
-  const [note, setNote] = useState();
-  const [task, setTask] = useState([]);
+const App = () => {
+  const defaultList = [
+    { name: "ItemOne" },
+    { name: "ItemTwo" },
+    { name: "ItemThree" }
+  ];
 
-  const removal = () => {
-    setTask(task.filter(item => ))
-  }
+  const [list, updateList] = useState(defaultList);
 
-  const addInput = () => {
-    setTask(tasks => [...tasks, <div>{note}<button type="button">Remove</button></div>]);
-  }
+  const handleRemoveItem = (e) => {
+   const name = e.target.getAttribute("name")
+    updateList(list.filter(item => item.name !== name));
+  };
 
-  return(
+  return (
     <div>
-      <input type="text" onChange={e => setNote(e.target.value)}/>
-      <button type="button" onClick={addInput}>Add Note</button> 
-      <h1>{task}</h1>   
-      </div>
-  )
+      {list.map(item => {
+        return (
+          <>
+            <span name={item.name} onClick={handleRemoveItem}>
+              x
+            </span>
+            <span>{item.name}</span>
+          </>
+        );
+      })}
+    </div>
+  );
 };
 
 
 
-function Calculator() {
-  return(<div>
 
-  </div>)
-}
+
 
 function ToDoList() {
 
@@ -257,7 +262,7 @@ function InputPractice() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <ToDoListRemoval />
+  <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
