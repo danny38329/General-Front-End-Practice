@@ -4,6 +4,29 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals'; 
 
+function ZodaxShop() {
+
+const diffusers = {
+  casablanca: 35,
+  dream: 43,
+  modena: 100
+};
+
+const candles = {
+  apothecary: 50,
+  illuminaria: 75,
+  paloma: 20
+}
+
+const glasses = {
+  aperitivo: 15,
+  fez : 10,
+  bandol: 5
+};
+
+
+};
+
 const App = () => {
   const defaultList = [
     { name: "ItemOne" },
