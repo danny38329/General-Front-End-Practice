@@ -37,14 +37,20 @@ const candlesButton = () => {
   setCategory('candles');
 };
 
+const glassDisplay = <div>
+  <h1>Aperitivo : ${glasses.aperitivo}</h1>
+  <h1>Fez : ${glasses.fez}</h1>
+  <h1>Bandol : ${glasses.bandol}</h1>
+</div>
+
 return(
   <div>
-    <button type='button'>Glasses</button>
+    <button type='button' onClick={glassesButton}>Glasses</button>
     <button type='button'>Diffusers</button>
     <button type='button'>Candles</button>
     <br>
     </br>
-  <h1>{category === 'diffusers'? }</h1>
+  <h1>{category === 'glasses'? glassDisplay: ""}</h1>
 
   </div>
 );
@@ -310,7 +316,7 @@ function InputPractice() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <App />
+  <ZodaxShop />
   </React.StrictMode>,
   document.getElementById('root')
 );
