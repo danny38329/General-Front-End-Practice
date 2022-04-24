@@ -5,6 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals'; 
 
 function ZodaxShop() {
+  const [category, setCategory] = useState('');
 
 const diffusers = {
   casablanca: 35,
@@ -23,6 +24,30 @@ const glasses = {
   fez : 10,
   bandol: 5
 };
+
+const glassesButton = () => {
+  setCategory('glasses');
+};
+
+const diffusersButton = () => {
+  setCategory('diffusers');
+};
+
+const candlesButton = () => {
+  setCategory('candles');
+};
+
+return(
+  <div>
+    <button type='button'>Glasses</button>
+    <button type='button'>Diffusers</button>
+    <button type='button'>Candles</button>
+    <br>
+    </br>
+  <h1>{category === 'diffusers'? }</h1>
+
+  </div>
+);
 
 
 };
