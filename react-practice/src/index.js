@@ -9,7 +9,13 @@ function AddMinusCalculator() {
   const [symbol, setSymbol] = useState('');
 
   return(<div>
-    
+    <button type="button">1</button>
+    <button type="button">2</button>
+    <button type="button">3</button>
+    <button type="button">+</button>
+    <button type="button">-</button>
+    <button type="button">=</button>
+
   </div>)
 };
 
