@@ -7,7 +7,9 @@ import reportWebVitals from './reportWebVitals';
 function AddMinusCalculator() {
   const [current, setCurrent] = useState(0);
   const [symbol, setSymbol] = useState('');
-
+  const [first, setFirst] = useState();
+  const [second, setSecond] = useState();
+ 
   return(<div>
     <button type="button">1</button>
     <button type="button">2</button>
