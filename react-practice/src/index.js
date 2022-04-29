@@ -9,6 +9,16 @@ function AddMinusCalculator() {
   const [symbol, setSymbol] = useState('');
   const [first, setFirst] = useState();
   const [second, setSecond] = useState();
+
+  const addMe = () => {
+    setSymbol('+');
+  };
+
+  const subtractMe = () => {
+    setSymbol('-');
+  };
+
+  
  
   return(<div>
     <button type="button">1</button>
