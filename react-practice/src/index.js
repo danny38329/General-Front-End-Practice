@@ -23,8 +23,21 @@ function AddMinusCalculator() {
       setFirst(1);
     } else {
       setSecond(1)
-    }
-  }
+    }};
+
+  const buttonTwo = () => {
+    if (first === 0) {
+      setFirst(2);
+    } else {
+      setSecond(2)
+    }};
+
+  const buttonThree = () => {
+    if (first === 0) {
+      setFirst(3);
+    } else {
+      setSecond(3)
+    }};
  
   return(<div>
     <button type="button">1</button>
