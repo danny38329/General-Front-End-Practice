@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 function AddMinusCalculator() {
   const [current, setCurrent] = useState(0);
   const [symbol, setSymbol] = useState('');
-  const [first, setFirst] = useState();
+  const [first, setFirst] = useState(0);
   const [second, setSecond] = useState();
 
   const addMe = () => {
@@ -18,7 +18,13 @@ function AddMinusCalculator() {
     setSymbol('-');
   };
 
-  
+  const buttonOne = () => {
+    if (first === 0) {
+      setFirst(1);
+    } else {
+      setSecond(1)
+    }
+  }
  
   return(<div>
     <button type="button">1</button>
