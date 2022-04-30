@@ -10,14 +10,6 @@ function AddMinusCalculator() {
   const [first, setFirst] = useState(0);
   const [second, setSecond] = useState();
 
-  const addMe = () => {
-    setSymbol('+');
-  };
-
-  const subtractMe = () => {
-    setSymbol('-');
-  };
-
   const buttonOne = () => {
     if (first === 0) {
       setFirst(1);
@@ -38,6 +30,22 @@ function AddMinusCalculator() {
     } else {
       setSecond(3)
     }};
+
+  const addMe = () => {
+    setSymbol('+');
+  };
+
+  const subtractMe = () => {
+    setSymbol('-');
+  };
+
+  const equalSymbol = () => {
+    if (symbol === "-") {
+      return first - second;
+    } else {
+      return first + second;
+    }
+  }
  
   return(<div>
     <button type="button">1</button>
