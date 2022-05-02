@@ -8,25 +8,25 @@ function AddMinusCalculator() {
   const [current, setCurrent] = useState(0);
   const [symbol, setSymbol] = useState('');
   const [first, setFirst] = useState(0);
-  const [second, setSecond] = useState();
+  const [second, setSecond] = useState(0);
 
   const buttonOne = () => {
-    if (first === 0) {
-      setFirst(1);
+    if (current === 0) {
+      setCurrent(1);
     } else {
       setSecond(1)
     }};
 
   const buttonTwo = () => {
-    if (first === 0) {
-      setFirst(2);
+    if (current === 0) {
+      setCurrent(2);
     } else {
       setSecond(2)
     }};
 
   const buttonThree = () => {
-    if (first === 0) {
-      setFirst(3);
+    if (current === 0) {
+      setCurrent(3);
     } else {
       setSecond(3)
     }};
@@ -41,19 +41,20 @@ function AddMinusCalculator() {
 
   const equalSymbol = () => {
     if (symbol === "-") {
-      return first - second;
+      setCurrent(current - second);
     } else {
-      return first + second;
+      setCurrent(current + second);
     }
   }
  
   return(<div>
-    <button type="button">1</button>
-    <button type="button">2</button>
-    <button type="button">3</button>
-    <button type="button">+</button>
-    <button type="button">-</button>
-    <button type="button">=</button>
+    <button type="button" onClick={buttonOne}>1</button>
+    <button type="button" onClick={buttonTwo}>2</button>
+    <button type="button" onClick={buttonThree}>3</button>
+    <button type="button" onClick={addMe}>+</button>
+    <button type="button" onClick={subtractMe}>-</button>
+    <button type="button" onClick={equalSymbol}>=</button>
+    <h1>{current}</h1>
 
   </div>)
 };
@@ -370,7 +371,7 @@ function InputPractice() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <ZodaxShop />
+  <AddMinusCalculator />
   </React.StrictMode>,
   document.getElementById('root')
 );
