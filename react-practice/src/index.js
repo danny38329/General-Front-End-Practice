@@ -7,14 +7,14 @@ import reportWebVitals from './reportWebVitals';
 function AddMinusCalculator() {
   const [current, setCurrent] = useState(0);
   const [symbol, setSymbol] = useState('');
-  const [first, setFirst] = useState(0);
-  const [second, setSecond] = useState(0);
+  const [first, setFirst] = useState('');
+  const [second, setSecond] = useState('');
 
   const buttonOne = () => {
-    if (current === 0) {
-      setCurrent(1);
+    if (current === '') {
+      setCurrent(current + '1');
     } else {
-      setSecond(1)
+      setSecond() 
     }};
 
   const buttonTwo = () => {
@@ -51,9 +51,17 @@ function AddMinusCalculator() {
     <button type="button" onClick={buttonOne}>1</button>
     <button type="button" onClick={buttonTwo}>2</button>
     <button type="button" onClick={buttonThree}>3</button>
+    <button type="button" onClick={buttonOne}>4</button>
+    <button type="button" onClick={buttonTwo}>5</button>
+    <button type="button" onClick={buttonThree}>6</button>
+    <button type="button" onClick={buttonOne}>7</button>
+    <button type="button" onClick={buttonTwo}>8</button>
+    <button type="button" onClick={buttonThree}>9</button>
+
     <button type="button" onClick={addMe}>+</button>
     <button type="button" onClick={subtractMe}>-</button>
     <button type="button" onClick={equalSymbol}>=</button>
+    <button type="button" onClick={equalSymbol}>C</button>
     <h1>{current}</h1>
 
   </div>)
