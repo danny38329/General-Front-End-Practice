@@ -5,10 +5,12 @@ import './index.css';
 import reportWebVitals from './reportWebVitals'; 
 
 function AddMinusCalculator() {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState('');
   const [symbol, setSymbol] = useState('');
   const [first, setFirst] = useState('');
   const [second, setSecond] = useState('');
+  const [switchOne, setSwitchOne] = useState(true);
+  const [switchTwo, setSwitchTwo] = useState(false);
 
   const buttonOne = () => {
     if (current === '') {
