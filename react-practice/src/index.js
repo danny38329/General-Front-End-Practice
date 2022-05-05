@@ -4,19 +4,29 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals'; 
 
+function Squirtle() {
+  const [answer, setAnswer] = useState('test');
+
+  const [word, setWord] = useState();
+
+  
+
+
+
+}
+
 function AddMinusCalculator() {
   const [current, setCurrent] = useState('');
   const [symbol, setSymbol] = useState('');
-  const [first, setFirst] = useState('');
   const [second, setSecond] = useState('');
   const [switchOne, setSwitchOne] = useState(true);
-  const [switchTwo, setSwitchTwo] = useState(false);
+  const [switchTwo, setSwitchTwo] = useState(true);
 
   const buttonOne = () => {
-    if (current === '') {
+    if (switchOne) {
       setCurrent(current + '1');
-    } else {
-      setSecond() 
+    } else if (switchTwo) {
+      setSecond(second + '1') 
     }};
 
   const buttonTwo = () => {
