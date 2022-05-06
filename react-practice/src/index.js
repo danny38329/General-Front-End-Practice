@@ -9,11 +9,8 @@ function Squirtle() {
 
   const [word, setWord] = useState();
 
-  
-
-
-
-}
+  return(<div><span>{answer[0]}</span><span>{answer[1]}</span><span>{answer[2]}</span><span>{answer[3]}</span></div>)
+};
 
 function AddMinusCalculator() {
   const [current, setCurrent] = useState('');
@@ -391,7 +388,7 @@ function InputPractice() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <AddMinusCalculator />
+  <Squirtle />
   </React.StrictMode>,
   document.getElementById('root')
 );
