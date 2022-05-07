@@ -9,7 +9,7 @@ function Squirtle() {
 
   const [word, setWord] = useState();
 
-  return(<div><span>{answer[0]}</span><span>{answer[1]}</span><span>{answer[2]}</span><span>{answer[3]}</span></div>)
+  return(<div><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>)
 };
 
 function AddMinusCalculator() {
