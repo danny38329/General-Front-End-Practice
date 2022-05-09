@@ -13,11 +13,14 @@ function Squirtle() {
 
   return(<div>
     <input type="text" />
-    
-    <br></br>
-    <br></br>
-    <br></br>
 
+    <br></br>
+    <br></br>
+    <br></br>
+    <span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
+    <br></br>
+    <br></br>
+    <br></br>
     <span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
     </div>)
 };
