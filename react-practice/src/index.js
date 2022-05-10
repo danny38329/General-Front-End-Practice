@@ -5,9 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals'; 
 
 function Squirtle() {
-  const [answer, setAnswer] = useState('');
-
-  const [word, setWord] = useState('');
+  const [answer, setAnswer] = useState('test');
 
 
   return(<div>
@@ -16,10 +14,10 @@ function Squirtle() {
     <br></br>
     <br></br>
     <br></br>
-    { answer[0] !== false ? <span>{answer[0].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
-    { answer[1] !== false ? <span>{answer[1].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
-    { answer[2] !== false ? <span>{answer[2].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
-    { answer[3] !== false ? <span>{answer[3].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
+    { answer[0] !== undefined ? <span>{answer[0].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
+    { answer[1] !== undefined ? <span>{answer[1].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
+    { answer[2] !== undefined ? <span>{answer[2].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
+    { answer[3] !== undefined ? <span>{answer[3].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
     <br></br>
     <br></br>
     <br></br>
