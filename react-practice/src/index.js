@@ -9,7 +9,12 @@ function Squirtle() {
   const secretWord = "fire";
 
   const checkWords = () => {
-    
+    for (let i = 0; i < 4; i++ ) {
+      if (secretWord[i]===answer[i]) {
+         document.getElementById("one").style.backgroundColor = "lightgreen";
+         document.getElementById("one").style.color = "black";
+      }
+    }
   };
 
 
@@ -19,14 +24,14 @@ function Squirtle() {
     <br></br>
     <br></br>
     <br></br>
-    { answer[0] !== undefined ? <span>{answer[0].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
+    { answer[0] !== undefined ? <span id="one">{answer[0].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
     { answer[1] !== undefined ? <span>{answer[1].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
     { answer[2] !== undefined ? <span>{answer[2].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
     { answer[3] !== undefined ? <span>{answer[3].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
     <br></br>
     <br></br>
     <br></br>
-    <button type="button" >Check</button>
+    <button type="button" onClick={checkWords}>Check</button>
     </div>)
 };
 
