@@ -6,6 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 function Squirtle() {
   const [answer, setAnswer] = useState('test');
+  const secretWord = "fire";
+
+  const checkWords = () => {
+    
+  };
 
 
   return(<div>
@@ -21,7 +26,7 @@ function Squirtle() {
     <br></br>
     <br></br>
     <br></br>
-    <span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>
+    <button type="button" >Check</button>
     </div>)
 };
 
