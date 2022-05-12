@@ -10,9 +10,12 @@ function Squirtle() {
 
   const checkWords = () => {
     for (let i = 0; i < 4; i++ ) {
-      if (secretWord[i]===answer[i]) {
+      if (secretWord[i] === answer[i]) {
          document.getElementById("one").style.backgroundColor = "lightgreen";
          document.getElementById("one").style.color = "black";
+      } else if (secretWord.includes(answer[i])) {
+        document.getElementById("two").style.backgroundColor = "yellow";
+         document.getElementById("two").style.color = "black";
       }
     }
   };
@@ -25,9 +28,9 @@ function Squirtle() {
     <br></br>
     <br></br>
     { answer[0] !== undefined ? <span id="one">{answer[0].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
-    { answer[1] !== undefined ? <span>{answer[1].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
-    { answer[2] !== undefined ? <span>{answer[2].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
-    { answer[3] !== undefined ? <span>{answer[3].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
+    { answer[1] !== undefined ? <span id='two'>{answer[1].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
+    { answer[2] !== undefined ? <span id='three'>{answer[2].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
+    { answer[3] !== undefined ? <span id='four'>{answer[3].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
     <br></br>
     <br></br>
     <br></br>
