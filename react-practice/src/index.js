@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 function Squirtle() {
   const [answer, setAnswer] = useState('test');
+  const [message, setMessage] = useState('');
   const secretWord = "fire";
 
   const checkWords = () => {
@@ -19,9 +20,11 @@ function Squirtle() {
         i++;
       } else if (secretWord[i] !== answer[i]) {
         i++; 
+    }};
+    if (secretWord === answer) {
+      setMessage("Congrats!");
     }
-  }};
-
+};
 
   return(<div>
     <input type="text"  maxLength={4} onChange={e => setAnswer(e.target.value)} />
@@ -37,6 +40,10 @@ function Squirtle() {
     <br></br>
     <br></br>
     <button type="button" onClick={checkWords}>Check</button>
+    <br></br>
+    <br></br>
+    <br></br>
+    {message}
     </div>)
 };
 
