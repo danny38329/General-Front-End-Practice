@@ -4,12 +4,39 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals'; 
 
+function PhoneInput() {
+
+}
+
 function Squirtle() {
   const [answer, setAnswer] = useState('test');
+  const [secondTry, setSecondTry] = useState('');
+  const [secondAnswer, setSecondAnswer] = useState('');
   const [message, setMessage] = useState('');
   const secretWord = "fire";
 
+  let newBlock = <div>
+      <input type="text"  maxLength={4} onChange={e => setSecondAnswer(e.target.value)} />
+  
+      <br></br>
+      <br></br>
+      <br></br>
+      { secondAnswer[0] !== undefined ? <span id="second0">{secondAnswer[0].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
+      { secondAnswer[1] !== undefined ? <span id='second1'>{secondAnswer[1].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
+      { secondAnswer[2] !== undefined ? <span id='second2'>{secondAnswer[2].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
+      { secondAnswer[3] !== undefined ? <span id='second3'>{secondAnswer[3].toUpperCase()}</span> :<span>&nbsp;&nbsp;</span> }
+      <br></br>
+      <br></br>
+      <br></br>
+      <button type="button" onClick={checkSecondAnswer}>Check</button>
+      <br></br>
+      <br></br>
+      <br></br>
+      
+      </div>;
+
   const checkWords = () => {
+
     let i = 0;
     while (i < 4) {
       if (answer[i] === secretWord[i]) {
@@ -19,10 +46,31 @@ function Squirtle() {
         document.getElementById("word"+i.toString()).style.backgroundColor = "yellow";
         i++;
       } else if (secretWord[i] !== answer[i]) {
-        i++; 
+        i++; ``
     }};
+
+    const checkSecondAnswer = () => {
+
+      let i = 0;
+      while (i < 4) {
+        if (secondTry[i] === secretWord[i]) {
+          document.getElementById("second"+i.toString()).style.backgroundColor = "lightgreen";
+          i++;
+        } else if (secretWord.indexOf(secondTry[i]) !== -1) {
+          document.getElementById("second"+i.toString()).style.backgroundColor = "yellow";
+          i++;
+        } else if (secretWord[i] !== secondTry[i]) {
+          i++; ``
+      }};
+
+
     if (secretWord === answer) {
       setMessage("Congrats!");
+    } else {
+      
+      return(newBlock)
+    };
+       
     }
 };
 
@@ -43,7 +91,7 @@ function Squirtle() {
     <br></br>
     <br></br>
     <br></br>
-    {message}
+    {message !== '' ? message : newBlock}
     </div>)
 };
 
