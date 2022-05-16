@@ -16,12 +16,16 @@ function PhoneInput() {
     element.remove();
     drill.remove();
   };
+
   return(
   <div>
-  <input type='text' id="test" onChange={e => setPhone(e.target.value.toString()) } />
-  <button type="button" id="drill" onClick={addNumber}>Add</button>
   
-  <h1>{display}</h1>
+  <h1>{display === '' ? 
+  <div>
+  <input type='text' id="test" onChange={e => setPhone(e.target.value.toString()) } />
+  <button type="button" id="drill" onClick={addNumber}>Add</button></div> : 
+  <button type='button' >Delete</button>
+}</h1>
   </div>
   )
 };
