@@ -8,24 +8,51 @@ function PhoneInput() {
 
   const [phone, setPhone] = useState('');
   const [display, setDisplay] = useState('');
+  const [toggle, setToggle] = useState(true);
+
+  let inputDisplay = () => {
+
+    return(<div>
+      <input type='text' id="test" onChange={e => setPhone(e.target.value.toString())} />
+      <br></br>
+      <button type="button" id="drill" onClick={addNumber}>Add</button>
+      </div>)};
+
+  let phoneDisplay = () => {
+
+    return(<div>
+      <button type='button' id="third" onClick={removeNumber}>Delete</button>
+    </div>)};
+
 
   const addNumber = () => {
     setDisplay(phone);
     let element = document.getElementById('test');
     let drill = document.getElementById('drill');
-    element.remove();
-    drill.remove();
+    setToggle(false);
   };
+
+  const removeNumber = () => {
+    let element = document.getElementById('third');
+    setToggle(true);
+  };
+
+
 
   return(
   <div>
   
-  <h1>{display === '' ? 
-  <div>
-  <input type='text' id="test" onChange={e => setPhone(e.target.value.toString()) } />
-  <button type="button" id="drill" onClick={addNumber}>Add</button></div> : 
-  <button type='button' >Delete</button>
-}</h1>
+  <h1>
+    {toggle ? <div>
+      <input type='text' id="test" onChange={e => setPhone(e.target.value.toString())} />
+      <br></br>
+      <button type="button" id="drill" onClick={addNumber}>Add</button>
+      </div> : <div>
+      <button type='button' id="third" onClick={removeNumber}>Delete</button>
+    </div>}
+  
+  </h1>
+  {display}
   </div>
   )
 };
