@@ -4,6 +4,14 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals'; 
 
+function CombinationTest() {
+  return(<div>
+  <EmailInput />
+  <PhoneInput />
+        </div>)
+};
+
+
 function EmailInput() {
 
     const [email, setEmail] = useState('');
@@ -119,7 +127,7 @@ function PhoneInput() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <EmailInput />
+  <CombinationTest />
   </React.StrictMode>,
   document.getElementById('root')
 );
