@@ -4,6 +4,63 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals'; 
 
+function EmailInput() {
+
+    const [email, setEmail] = useState('');
+    const [display, setDisplay] = useState('');
+    const [toggle, setToggle] = useState(true);
+  
+    let inputDisplay = () => {
+  
+      return(<div>
+        <input type='text' id="test" onChange={e => setEmail(e.target.value)} />
+        <br></br>
+        <button type="button" id="drill" onClick={addEmail}>Add Email</button>
+        </div>)};
+  
+    let emailDisplay = () => {
+  
+      return(<div>
+        <button type='button' id="third" onClick={removeEmail}>Delete</button>
+      </div>)};
+  
+  
+    const addEmail = () => {
+      setDisplay(email);
+      setToggle(false);
+    };
+  
+    const removeEmail = () => {
+      setToggle(true);
+      setDisplay('')
+    };
+  
+  
+  
+    return(
+    <div>
+    
+    <h1>
+      {toggle ? <div>
+        <input type='text' id="test" onChange={e => setEmail(e.target.value)} />
+        <br></br>
+        <button type="button" id="drill" onClick={addEmail}>Add Email</button>
+        </div> : <div>
+        <button type='button' id="third" onClick={removeEmail}>Delete Email</button>
+      </div>}
+    
+    </h1>
+    {display}
+    </div>
+    )
+  };
+  
+  
+  
+
+
+
+
 function PhoneInput() {
 
   const [phone, setPhone] = useState('');
@@ -35,6 +92,7 @@ function PhoneInput() {
   const removeNumber = () => {
     let element = document.getElementById('third');
     setToggle(true);
+    setDisplay('');
   };
 
 
@@ -61,7 +119,7 @@ function PhoneInput() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <PhoneInput />
+  <EmailInput />
   </React.StrictMode>,
   document.getElementById('root')
 );
