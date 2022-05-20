@@ -4,12 +4,17 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals'; 
 
-function CalendarApp = () => {
+function CalendarApp() {
+  const [numberDay, setNumberDay] = useState({});
+  const [month, setMonth] = useState();
+  const [numberArray, setNumberArray] = useState();
+  const [dayOfWeek, setDayOfWeek] = useState('');
 
-let i = 1;
 
 
+for (let i = 0; i < 365; i++) {
 
+}; 
 
 let may = {
 
