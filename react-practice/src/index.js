@@ -13,9 +13,6 @@ function CalendarApp() {
 
 
 
-for (let i = 0; i < 365; i++) {
-setNumberArray(numberArray => [...numberArray, i])
-}; 
 
 
 
@@ -25,7 +22,7 @@ let may = {
 
 return(
   <div>
-    <h1>{numberArray}s</h1>
+    <h1>{}s</h1>
   </div>
 )
 
