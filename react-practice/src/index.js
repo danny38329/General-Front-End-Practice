@@ -4,6 +4,7 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals'; 
 
+
 function CalendarApp() {
 
   const [numberDay, setNumberDay] = useState({});
@@ -11,14 +12,15 @@ function CalendarApp() {
   const [numberArray, setNumberArray] = useState([]);
   const [dayOfWeek, setDayOfWeek] = useState('');
 
+const daysMonth = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
 
+const stringDays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 
-
-
+let objectMay;
 
 let may = {
 
-}
+};
 
 return(
   <div>
@@ -27,10 +29,6 @@ return(
 )
 
 };
-
-
-
-
 
 
 ReactDOM.render(
