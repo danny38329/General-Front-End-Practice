@@ -16,6 +16,10 @@ const daysMonth = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,2
 
 const stringDays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 
+var arr = new Array(100).fill().map((d,i)=>++i)
+
+let revisedArr = arr.split();
+
 let objectMay;
 
 let may = {
@@ -24,7 +28,7 @@ let may = {
 
 return(
   <div>
-    <h1>{}s</h1>
+    <h1>{revisedArr}s</h1>
   </div>
 )
 
