@@ -18,12 +18,10 @@ const stringDays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday
 
 var arr = new Array(100).fill().map((d,i)=>++i)
 
-let revisedArr = arr.split();
-
 let objectMay;
 
-let may = {
-
+let may = { 
+  '1': "Sunday"
 };
 
 return(
