@@ -4,75 +4,20 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals'; 
 
+function OrderEnter() {
 
-function CalendarApp() {
-
-  const [numberDay, setNumberDay] = useState({});
-  const [month, setMonth] = useState();
-  const [numberArray, setNumberArray] = useState([]);
-  const [dayOfWeek, setDayOfWeek] = useState('');
-
-let testArr = [];  
-
-for (let i = 1; i < 18; i++) {
-  testArr.push(i);
-}
-
-
-const daysMonth = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
-
-const stringDays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-
-var arr = new Array(100).fill().map((d,i)=>++i)
-
-let objectMay;
-
-/*let may = { 
-  '1': "Sunday",
-  '2':
-  '3':
-  '4':
-  '5':
-  '6':
-  '7':
-  '8':
-  '9':
-  '10':
-  '11':
-  '12':
-  '13':
-  '14':
-  '15':
-  '16':
-  '17':
-  '18':
-  '19':
-  '20':
-  '21':
-  '22':
-  '23':
-  '24':
-  '25':
-  '26':
-  '27':
-  '28':
-  '29':
-  '30':
-  '31':
 };
-*/
-return(
-  <div>
-    <h1>{testArr}s</h1>
-  </div>
-)
+
+function InputOrder() {
+  const [item, setItem] = useState('');
+  
 
 };
 
 
 ReactDOM.render(
   <React.StrictMode>
-  <CalendarApp />
+  <InputOrder />
   </React.StrictMode>,
   document.getElementById('root')
 );
