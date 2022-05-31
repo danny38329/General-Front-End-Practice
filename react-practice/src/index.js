@@ -4,14 +4,33 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals'; 
 
+const customers = {
+  '83819':'Steele Angel',
+  '67001':"Rooster's Nest"
+};
+
+const glasses = {
+  'Aperitivo': '12.00',
+  'Bandol': '11:00'
+};
+
 function OrderEnter() {
+
+};
+
+function InputCustomer() {
+const [name, setName] = useState('');
+
+
 
 };
 
 function InputOrder() {
   const [item, setItem] = useState('');
-  
 
+  return(<div>
+    <input type='text'></input>
+  </div>)
 };
 
 
