@@ -22,7 +22,9 @@ function InputCustomer() {
 const [name, setName] = useState('');
 
 
-
+return(<div>
+  <input type='text'><</input>
+</div>)
 };
 
 function InputOrder() {
