@@ -23,7 +23,9 @@ const [name, setName] = useState('');
 
 
 return(<div>
-  <input type='text'><</input>
+  <input type='text'onChange={e => setName(e.target.value)}></input>
+  <br></br>
+  <button type='text'>Add Customer</button>
 </div>)
 };
 
@@ -38,7 +40,7 @@ function InputOrder() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <InputOrder />
+  <InputCustomer />
   </React.StrictMode>,
   document.getElementById('root')
 );
