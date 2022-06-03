@@ -15,6 +15,7 @@ const glasses = {
 };
 
 function OrderEnter() {
+const[order, setOrder] = useState('');
 
 };
 
