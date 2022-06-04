@@ -17,6 +17,13 @@ const glasses = {
 function OrderEnter() {
 const[order, setOrder] = useState('');
 
+return(
+  <div>
+    <input type='text'onChange={e => setOrder(e.target.value)}></input>
+    <br></br>
+    <button type='text'>Add Customer</button>
+  </div>
+)
 };
 
 function InputCustomer() {
