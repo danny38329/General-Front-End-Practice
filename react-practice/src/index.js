@@ -16,6 +16,11 @@ const glasses = {
 
 function OrderEnter() {
 const[order, setOrder] = useState('');
+const [ordersList, setOrdersList] = useState([]);
+
+const inputOrder = () => {
+   
+};
 
 return(
   <div>
