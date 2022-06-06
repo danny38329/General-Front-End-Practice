@@ -19,14 +19,16 @@ const[order, setOrder] = useState('');
 const [ordersList, setOrdersList] = useState([]);
 
 const inputOrder = () => {
-   
+   setOrdersList([...ordersList, order]);
 };
 
 return(
   <div>
     <input type='text'onChange={e => setOrder(e.target.value)}></input>
     <br></br>
-    <button type='text'>Add Customer</button>
+    <button type='text' onClick={inputOrder}>Add Order To Make</button>
+    <br></br>
+    <h1>{ordersList}</h1>
   </div>
 )
 };
@@ -53,7 +55,7 @@ function InputOrder() {
 
 ReactDOM.render(
   <React.StrictMode>
-  <InputCustomer />
+  <OrderEnter />
   </React.StrictMode>,
   document.getElementById('root')
 );
