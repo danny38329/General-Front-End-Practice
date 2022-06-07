@@ -19,7 +19,7 @@ const[order, setOrder] = useState('');
 const [ordersList, setOrdersList] = useState([]);
 
 const inputOrder = () => {
-   setOrdersList([...ordersList, order]);
+   setOrdersList([...ordersList, " " + order]);
 };
 
 return(
@@ -36,6 +36,9 @@ return(
 function InputCustomer() {
 const [name, setName] = useState('');
 
+const addCustomer = () => {
+  
+};
 
 return(<div>
   <input type='text'onChange={e => setName(e.target.value)}></input>
