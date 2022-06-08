@@ -35,9 +35,10 @@ return(
 
 function InputCustomer() {
 const [name, setName] = useState('');
+const [customerList, setCustomerList] = useState([]);
 
 const addCustomer = () => {
-  
+  setCustomerList([...customerList, name])
 };
 
 return(<div>
