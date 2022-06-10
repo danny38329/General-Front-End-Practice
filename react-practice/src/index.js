@@ -36,10 +36,15 @@ return(
 function InputCustomer() {
 const [name, setName] = useState('');
 const [customerList, setCustomerList] = useState([]);
+const [customerNumber, setCustomerNumber] = useState();
 
 const addCustomer = () => {
   setCustomerList([...customerList, name])
 };
+
+const addToDatabase = () => {
+  
+}
 
 return(<div>
   <input type='text'onChange={e => setName(e.target.value)}></input>
