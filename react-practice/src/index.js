@@ -43,8 +43,12 @@ const addCustomer = () => {
 };
 
 const addToDatabase = () => {
-  
-}
+
+};
+
+const activeOrInactive = () => {
+
+};
 
 return(<div>
   <input type='text'onChange={e => setName(e.target.value)}></input>
