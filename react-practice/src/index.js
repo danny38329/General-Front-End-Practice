@@ -37,13 +37,13 @@ function InputCustomer() {
 const [name, setName] = useState('');
 const [customerList, setCustomerList] = useState([]);
 const [customerNumber, setCustomerNumber] = useState();
-
+const [activeOrInactive, setActiveOrInactive] = useState(true)
 const addCustomer = () => {
   setCustomerList([...customerList, name])
 };
 
 const addToDatabase = () => {
-
+  
 };
 
 const activeOrInactive = () => {
