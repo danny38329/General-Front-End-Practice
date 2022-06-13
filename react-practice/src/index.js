@@ -43,10 +43,10 @@ const addCustomer = () => {
 };
 
 const addToDatabase = () => {
-  
+  return 1;
 };
 
-const activeOrInactive = () => {
+const keepOrRemove = () => {
 
 };
 
