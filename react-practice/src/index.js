@@ -14,6 +14,10 @@ const glasses = {
   'Bandol': '11:00'
 };
 
+function Financial() {
+
+};
+
 function OrderEnter() {
 const[order, setOrder] = useState('');
 const [ordersList, setOrdersList] = useState([]);
