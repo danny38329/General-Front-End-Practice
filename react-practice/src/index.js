@@ -15,6 +15,8 @@ const glasses = {
 };
 
 function Financial() {
+  const [balance, setBalance] = useState();
+  const [credit, setCredit] = useState();
 
 };
 
