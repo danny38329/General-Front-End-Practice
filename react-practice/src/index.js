@@ -18,6 +18,12 @@ function Financial() {
   const [balance, setBalance] = useState();
   const [credit, setCredit] = useState();
 
+  const creditCheck = () => {
+    if (balance >= 0) {
+      return true;
+    }
+  };
+
 };
 
 function OrderEnter() {
