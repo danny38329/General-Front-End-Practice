@@ -18,6 +18,10 @@ function Financial() {
   const [balance, setBalance] = useState();
   const [credit, setCredit] = useState();
 
+  const creditLimit = () => {
+    let aClass = 2000;
+    let bClass = 1000;
+  }
   const creditCheck = () => {
     if (balance >= 0) {
       return true;
