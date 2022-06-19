@@ -22,6 +22,7 @@ function Financial() {
     let aClass = 2000;
     let bClass = 1000;
     let cClass = 1100;
+    let dClass = 4000;
   }
   const creditCheck = () => {
     if (balance >= 0) {
