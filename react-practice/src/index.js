@@ -14,6 +14,11 @@ const glasses = {
   'Bandol': '11:00'
 };
 
+const bowls = {
+  "Mangowood" : "20.00",
+  "Alibaster" : "10.00"
+};
+
 function Financial() {
   const [balance, setBalance] = useState();
   const [credit, setCredit] = useState();
@@ -23,6 +28,7 @@ function Financial() {
     let bClass = 1000;
     let cClass = 1100;
     let dClass = 4000;
+    
   }
   const creditCheck = () => {
     if (balance >= 0) {
