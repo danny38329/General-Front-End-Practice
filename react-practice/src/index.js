@@ -18,6 +18,11 @@ const bowls = {
   "Mangowood" : "20.00",
   "Alibaster" : "10.00"
 };
+function Inventory() {
+  const [idNumber, setIdNumber] = useState('');
+  
+
+};
 
 function Financial() {
   const [balance, setBalance] = useState();
