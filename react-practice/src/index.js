@@ -21,6 +21,7 @@ const bowls = {
 function Inventory() {
   const [idNumber, setIdNumber] = useState('');
   const [itemNumber, setItemNumber] = useState('');
+  const [etaDate, setEtaDate] = useState('');
 
 
 };
