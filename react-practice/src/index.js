@@ -29,6 +29,8 @@ function Inventory() {
 function Financial() {
   const [balance, setBalance] = useState();
   const [credit, setCredit] = useState();
+  const [money, setMoney] = useState();
+  
 
   const creditLimit = () => {
     let aClass = 2000;
