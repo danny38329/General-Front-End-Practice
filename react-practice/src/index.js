@@ -30,7 +30,8 @@ function Financial() {
   const [balance, setBalance] = useState();
   const [credit, setCredit] = useState();
   const [money, setMoney] = useState();
-  
+  const [receivables, setReceivables] = useState();
+
 
   const creditLimit = () => {
     let aClass = 2000;
